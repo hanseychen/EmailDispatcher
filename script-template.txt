@@ -1,0 +1,7 @@
+tell application "Mail"
+	set theMessage to make new outgoing message with properties {sender:"chen.4800@osu.edu", subject:"$SUBJECT", content:"$CONTENT"}
+		tell theMessage
+			make new to recipient with properties {address:"$ADDRESS"}
+			send
+	end tell
+end tell
